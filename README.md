@@ -1,2 +1,4 @@
 # Potential-Airflow-Past-a-Cylinder
-This python script uses matplotlib to demonstrate how potential airflow passes past a cylinder.
+This python script uses matplotlib to demonstrate how potential uniform airflow passes a cylinder.
+# How it works
+The script models the cylinder as a doublet, and turns the surrounding space in to a grid. At each point in the grid, the script calculates the gradient of fluid potential due to the doublet using the partial derivatives of the fluid potential equations in the x and y directions. These are the x and y components of fluid velocity at each point in the grid. These values are then superposed / added to the constant velocity of the uniform airflow, and matplotlib then plots the vector field. The speed of each point is calcuated using pythagoras's theorem, and this is then used to colour each vector based on airspeed. This allows the points of stagnation at 0 and pi radians to be seen.
