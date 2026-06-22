@@ -5,7 +5,7 @@ import numpy as np
 from math import pi,sqrt
 #---------------------------------------------- initialise required variables
 cylinder_radius = float(input("Cylinder Radius >>> "))
-uniform_v = float(input("What is the relative speed of airflow >>> "))
+uniform_v = 1
 num_x = int(input("How many x-coordinates >>> "))
 num_y = int(input("How many y-coordinates >>> "))
 
@@ -41,7 +41,7 @@ axes = mp.gca()
 axes.add_patch(Cylinder)
 axes.set_aspect("equal")
 mp.title("Potential Airflow Past a cylinder")
-cbar = mp.colorbar()
+cbar = mp.colorbar(label="Speed (relative to uniform fluid speed)" )
 
 # display vector field
 mp.show()
