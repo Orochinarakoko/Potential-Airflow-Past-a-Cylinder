@@ -24,8 +24,8 @@ for x in x_coords:
     for y in y_coords:
 
         if sqrt(((x-(5*cylinder_radius))**2+(y-(1.5*cylinder_radius))**2))>= cylinder_radius:
-            x_v.append(uniform_v + (strength/2*pi)*((-((x-(5*cylinder_radius))**2)+(y-(1.5*cylinder_radius))**2)/(((x-(5*cylinder_radius))**2)+((y-(1.5*cylinder_radius))**2))**2))
-            y_v.append((strength/2*np.pi)*((-2*(x-(5*cylinder_radius))*(y-(1.5*cylinder_radius)))/((((x-(5*cylinder_radius))**2)+((y-(1.5*cylinder_radius))**2))**2)))
+            x_v.append(uniform_v + (strength)*((-((x-(5*cylinder_radius))**2)+(y-(1.5*cylinder_radius))**2)/(((x-(5*cylinder_radius))**2)+((y-(1.5*cylinder_radius))**2))**2))
+            y_v.append((strength)*((-2*(x-(5*cylinder_radius))*(y-(1.5*cylinder_radius)))/((((x-(5*cylinder_radius))**2)+((y-(1.5*cylinder_radius))**2))**2)))
             speed.append(sqrt((x_v[-1])**2+(y_v[-1])**2))
         else:
             x_v.append(0)
